@@ -1,15 +1,86 @@
 
+t = Math.round( 3 * Math.random() - 0.5 ); // tenses
+f = Math.round( 3 * Math.random() - 0.5 ); // forms
+p = Math.round( 6 * Math.random() - 0.5 ); // pronouns
+p2 = Math.round( 6 * Math.random() - 0.5 ); 
+p3 = Math.round( 6 * Math.random() - 0.5 ); // притяжательные
+
+v12 = Math.round( 12 * Math.random() - 0.5 );
+v50 = Math.round( 50 * Math.random() - 0.5 ); // verbs
+v174 = Math.round( 174 * Math.random() - 0.5 );
+q = Math.round( 6 * Math.random() - 0.5 ); // questions
+num = Math.round( 2 * Math.random() - 0.5 ); // number
+a50 = Math.round( 6 * Math.random() - 0.5 ); // adj
+n202 = Math.round( 6 * Math.random() - 0.5 ); // noun
+subs = Math.round( 17 * Math.random() - 0.5 ); // subjects
+ap = Math.round( 8 * Math.random() - 0.5 ); // absprons
+
+
 var tenses = [
-"прошедшее", 
-"наcтоящее", 
-"будущее"
+"past", 
+"present", 
+"future"
 ];
 
 var forms = [
-"утвердительная", 
-"отрицательная", 
-"вопросительная"
+"-", 
+"+", 
+"?"
 ];
+
+var v12en = [
+"love", 
+"live", 
+"work", 
+"open", 
+"close", 
+"see", 
+"come", 
+"go", 
+"know", 
+"think", 
+"start", 
+"finish"
+];
+
+var v12en2 = [
+"loved", 
+"lived", 
+"worked", 
+"opened", 
+"closed", 
+"saw", 
+"came", 
+"went", 
+"knew", 
+"thought", 
+"started", 
+"finished"
+];
+
+var v12ru = [
+"любить", 
+"жить", 
+"работать", 
+"открыть", 
+"закрыть", 
+"видеть", 
+"приходить", 
+"идти", 
+"знать", 
+"думать", 
+"начать", 
+"закончить"
+];
+
+
+
+
+
+
+
+
+
 
 var absprons = [
 "мой</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>mine [maɪn]", 
@@ -30,6 +101,30 @@ var prons = [
 "он</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>he  [hi]", 
 "она</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>she  [ʃi]"
 ];
+
+var pronsen = [
+"I  [aɪ]", 
+"you  [ju]", 
+"we  [wi]", 
+"they  [ðeɪ]", 
+"he  [hi]", 
+"she  [ʃi]"
+];
+
+var pronsru = [
+"я", 
+"ты", 
+"мы", 
+"они", 
+"он", 
+"она"
+];
+
+
+
+
+
+
 
 var subjects = [
 "я</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>I  [aɪ]", 
@@ -79,23 +174,110 @@ var quests = [
 ];
 
 var numbers = [
-"единственное", 
-"множественное"
+"единств.", 
+"множ."
 ];
 
 var be = "быть</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>be [bi:] (am [æm, əm], is [ɪz], are [ɑː(r)]) - was [wɒz]/were [wɜ:] - been [bi:n]";
 
-t = Math.round( 3 * Math.random() - 0.5 ); // tenses
-f = Math.round( 3 * Math.random() - 0.5 ); // forms
-p = Math.round( 6 * Math.random() - 0.5 ); // pronouns
-p2 = Math.round( 6 * Math.random() - 0.5 ); 
-p3 = Math.round( 6 * Math.random() - 0.5 ); // притяжательные
-v50 = Math.round( 50 * Math.random() - 0.5 ); // verbs
-v174 = Math.round( 174 * Math.random() - 0.5 );
-q = Math.round( 6 * Math.random() - 0.5 ); // questions
-num = Math.round( 2 * Math.random() - 0.5 ); // number
-a50 = Math.round( 6 * Math.random() - 0.5 ); // adj
-n202 = Math.round( 6 * Math.random() - 0.5 ); // noun
-subs = Math.round( 17 * Math.random() - 0.5 ); // subjects
-ap = Math.round( 8 * Math.random() - 0.5 ); // absprons
+
+
+
+
+
+
+
+
+var a = '';
+var b = '';
+var c = '';
+
+
+
+
+
+
+// 1
+if (forms[f] === "?") {
+	if (tenses[t] === "future") {
+	a = "will ";
+	} else if (tenses[t] === "present") {
+
+//	a = "Do/Does ";
+
+		if ( (pronsen[p] === "he") || ((pronsen[p] === "she")) ) {
+		a = "does";
+		} else {
+		a = "do";
+		}
+
+	} else {
+	a = "did ";
+	}
+} else {
+a = pronsen[p];
+}
+
+// 2
+if ( forms[f] === "?" ) {
+b = pronsen[p];
+};
+if ( (forms[f] === "+") && (tenses[t] === "future") ) {
+b = "will";
+}
+if ( (forms[f] === "-") && (tenses[t] === "future") ) {
+b = "won't";
+}
+
+if ( (forms[f] === "-") && (tenses[t] === "present") ) {
+
+// b = "do/does not";
+
+		if ( ( pronsen[p] === "he" ) || ( pronsen[p] === "she" ) ) {
+		b = "doesn't";
+		} else {
+		b = "don't";
+		}
+
+}
+if ( (forms[f] === "-") && (tenses[t] === "past") ) {
+b = "didn't";
+}
+
+// 3
+if ( forms[f] === "-" ) {
+c = v12en[v12];
+}
+
+if ( forms[f] === "?" ) {
+c = v12en[v12] + "?";
+}
+
+if ( (forms[f] === "+") && (tenses[t] === "past") ) {
+c = v12en2[v12];
+}
+
+if ( (forms[f] === "+") && (tenses[t] === "present") ) {
+
+// c = v12en[v12] + "(s)";
+
+		if ( ( pronsen[p] === "he" ) || ( pronsen[p] === "she" ) ) {
+		c = v12en[v12] + "(s)";
+		} else {
+		c = v12en[v12];
+		}
+
+}
+
+if ( (forms[f] === "+") && (tenses[t] === "future") ) {
+c = v12en[v12];
+}
+
+
+
+
+
+
+
+
 
