@@ -15,71 +15,17 @@ n202 = Math.round( 6 * Math.random() - 0.5 ); // noun
 subs = Math.round( 17 * Math.random() - 0.5 ); // subjects
 ap = Math.round( 8 * Math.random() - 0.5 ); // absprons
 
-
-var tenses = [
-"past", 
-"present", 
-"future"
-];
-
 var forms = [
 "-", 
 "+", 
 "?"
 ];
 
-var v12en = [
-"love", 
-"live", 
-"work", 
-"open", 
-"close", 
-"see", 
-"come", 
-"go", 
-"know", 
-"think", 
-"start", 
-"finish"
+var tenses = [
+"past", 
+"present", 
+"future"
 ];
-
-var v12en2 = [
-"loved", 
-"lived", 
-"worked", 
-"opened", 
-"closed", 
-"saw", 
-"came", 
-"went", 
-"knew", 
-"thought", 
-"started", 
-"finished"
-];
-
-var v12ru = [
-"любить", 
-"жить", 
-"работать", 
-"открыть", 
-"закрыть", 
-"видеть", 
-"приходить", 
-"идти", 
-"знать", 
-"думать", 
-"начать", 
-"закончить"
-];
-
-
-
-
-
-
-
-
 
 
 var absprons = [
@@ -93,6 +39,19 @@ var absprons = [
 "их</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>theirs [ðeəz, ðerz]"
 ];
 
+var abspronsen = [
+"mine [maɪn]", 
+"yours [jɔːz, jərz]", 
+"his [hɪz]", 
+"hers [hɜː(r)z]", 
+"its [ɪts]", 
+"ours [ɑːz, ɑːrz]", 
+"yours [jɔː(r), jʊr]", 
+"theirs [ðeəz, ðerz]"
+];
+
+
+
 var prons = [
 "я</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>I  [aɪ]", 
 "ты</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>you  [ju]", 
@@ -103,27 +62,13 @@ var prons = [
 ];
 
 var pronsen = [
-"I  [aɪ]", 
-"you  [ju]", 
-"we  [wi]", 
-"they  [ðeɪ]", 
-"he  [hi]", 
-"she  [ʃi]"
+"I", 
+"you", 
+"we", 
+"they", 
+"he", 
+"she"
 ];
-
-var pronsru = [
-"я", 
-"ты", 
-"мы", 
-"они", 
-"он", 
-"она"
-];
-
-
-
-
-
 
 
 var subjects = [
@@ -154,6 +99,17 @@ var prons2 = [
 "нас, нам</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>us [ʌs]", 
 "их, им</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>them [ðəm]"
 ];
+
+var prons2en = [
+"me [miː]", 
+"you [ju]", 
+"him [hɪm]", 
+"her [hə(r)]", 
+"us [ʌs]", 
+"them [ðəm]"
+];
+
+
 
 var prons3 = [
 "моё, мои</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>my [maɪ]", 
@@ -195,7 +151,7 @@ var c = '';
 
 
 
-
+//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
 // 1
 if (forms[f] === "?") {
@@ -262,7 +218,15 @@ if ( (forms[f] === "+") && (tenses[t] === "present") ) {
 // c = v12en[v12] + "(s)";
 
 		if ( ( pronsen[p] === "he" ) || ( pronsen[p] === "she" ) ) {
-		c = v12en[v12] + "(s)";
+
+//		c = v12en[v12] + "(s)";
+
+			if ( v12en[v12] === "go" ) {
+					c = "goes";
+			} else {
+					c = v12en[v12] + 's'; 
+			}
+
 		} else {
 		c = v12en[v12];
 		}
@@ -273,7 +237,11 @@ if ( (forms[f] === "+") && (tenses[t] === "future") ) {
 c = v12en[v12];
 }
 
+var answer1 = a + ' ' + b + ' ' + c;
 
+var answer2 = a + ' ' + b + ' ' + c + ' ' + prons2en[p2]; // wrong with quests
+
+//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
 
 
