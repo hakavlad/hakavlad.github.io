@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 t = Math.round( 3 * Math.random() - 0.5 ); // tenses
 f = Math.round( 3 * Math.random() - 0.5 ); // forms
 p = Math.round( 6 * Math.random() - 0.5 ); // pronouns
@@ -182,15 +175,5 @@ var numbers = [
 ];
 
 var be = "быть</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>be [bi:] (am [æm, əm], is [ɪz], are [ɑː(r)]) - was [wɒz]/were [wɜ:] - been [bi:n]";
-
-var a = '';
-var b = '';
-var c = '';
-
-
-
-
-
-
 
 

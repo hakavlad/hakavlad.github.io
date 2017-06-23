@@ -16,11 +16,39 @@
 
 <main>
 
-<div class="head"><a href="../index.html">EnglishTrainer</a> | Я — твой большой друг (I am your big friend)</div>
+<div class="head"><a href="../index.html">EnglishTrainer</a></div>
+
+<div id="table">
+
+Тренажер вида "Я — твой большой друг (I am your big friend)", использующий массивы из 17 подлежащих, 50 прилагательных и 202 существительных.<br><br>
+Составьте предложение на русском и переведите его на английский в соответствии с предлагаемыми временем и формой.<br><br>
+Жмите нижележащую кнопку для генерации сочетаний слов.<br><br>
+Используйте также <a href="../html/tables.html">справочные материалы</a>.
+
+</div>
+
+<div class="top" id="refresh">Refresh!</div>
 
 <script>
 
-document.write('<table>' + 
+function refresh(){
+
+t = Math.round( 3 * Math.random() - 0.5 ); // tenses
+f = Math.round( 3 * Math.random() - 0.5 ); // forms
+p = Math.round( 6 * Math.random() - 0.5 ); // pronouns
+p2 = Math.round( 6 * Math.random() - 0.5 ); 
+p3 = Math.round( 6 * Math.random() - 0.5 ); // притяжательные
+v12 = Math.round( 12 * Math.random() - 0.5 );
+v50 = Math.round( 45 * Math.random() - 0.5 ); // verbs
+v174 = Math.round( 174 * Math.random() - 0.5 );
+q = Math.round( 6 * Math.random() - 0.5 ); // questions
+num = Math.round( 2 * Math.random() - 0.5 ); // number
+a50 = Math.round( 6 * Math.random() - 0.5 ); // adj
+n202 = Math.round( 6 * Math.random() - 0.5 ); // noun
+subs = Math.round( 17 * Math.random() - 0.5 ); // subjects
+ap = Math.round( 8 * Math.random() - 0.5 ); // absprons
+
+table.innerHTML = '<table>' + 
 
 '<tr><td class="ab">Форма:</td><td>' + forms[f] + '</td></tr>' + 
 
@@ -38,11 +66,15 @@ document.write('<table>' +
 
 '<tr><td class="ab">Сущ.:</td><td class=w>' + nouns202[n202] + '</td></tr>' + 
 
-'</table>');
+'</table>';
+
+}
+
+window.onload = function(){ 
+document.querySelector("#refresh").onclick = refresh;
+}
 
 </script>
-
-<a href="" class="top">Обновить</a>
 
 </main>
 

@@ -29,23 +29,6 @@ var v12en2 = [
 "finished"
 ];
 
-var v12ru = [
-"любить", 
-"жить", 
-"работать", 
-"открыть", 
-"закрыть", 
-"видеть", 
-"приходить", 
-"идти", 
-"знать", 
-"думать", 
-"начать", 
-"закончить"
-];
-
-
-
 var verbs12 = [
 "любить</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>love [lʌv] - loved [lʌvd]", 
 "жить</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>live [liv] - lived [livd]", 
