@@ -8,6 +8,102 @@
 <link rel="stylesheet" href="../css/style.css">
 <script src="../js/verbs12.js"></script>
 <script src="../js/base.js"></script>
+<script>
+
+//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+// 1
+if (forms[f] === "?") {
+	if (tenses[t] === "future") {
+	a = "will ";
+	} else if (tenses[t] === "present") {
+
+//	a = "Do/Does ";
+
+		if ( (pronsen[p] === "he") || ((pronsen[p] === "she")) ) {
+		a = "does";
+		} else {
+		a = "do";
+		}
+
+	} else {
+	a = "did ";
+	}
+} else {
+a = pronsen[p];
+}
+
+// 2
+if ( forms[f] === "?" ) {
+b = pronsen[p];
+};
+if ( (forms[f] === "+") && (tenses[t] === "future") ) {
+b = "will";
+}
+if ( (forms[f] === "-") && (tenses[t] === "future") ) {
+b = "won't";
+}
+
+if ( (forms[f] === "-") && (tenses[t] === "present") ) {
+
+// b = "do/does not";
+
+		if ( ( pronsen[p] === "he" ) || ( pronsen[p] === "she" ) ) {
+		b = "doesn't";
+		} else {
+		b = "don't";
+		}
+
+}
+if ( (forms[f] === "-") && (tenses[t] === "past") ) {
+b = "didn't";
+}
+
+// 3
+if ( forms[f] === "-" ) {
+c = v12en[v12];
+}
+
+if ( forms[f] === "?" ) {
+c = v12en[v12] + "?";
+}
+
+if ( (forms[f] === "+") && (tenses[t] === "past") ) {
+c = v12en2[v12];
+}
+
+if ( (forms[f] === "+") && (tenses[t] === "present") ) {
+
+// c = v12en[v12] + "(s)";
+
+		if ( ( pronsen[p] === "he" ) || ( pronsen[p] === "she" ) ) {
+
+//		c = v12en[v12] + "(s)";
+
+			if ( v12en[v12] === "go" ) {
+					c = "goes";
+			} else {
+					c = v12en[v12] + 's'; 
+			}
+
+		} else {
+		c = v12en[v12];
+		}
+
+}
+
+if ( (forms[f] === "+") && (tenses[t] === "future") ) {
+c = v12en[v12];
+}
+
+var answer1 = a + ' ' + b + ' ' + c;
+
+var answer2 = a + ' ' + b + ' ' + c + ' ' + prons2en[p2]; // wrong with quests
+
+//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -22,7 +118,7 @@
 
 document.write('<table>' + 
 
-'<tr><td class="ab">Ответ:</td><td class=spo>' + answer1 + '</td></tr>' + 
+'<tr><td class="ab">Ответ:</td><td>' + answer1 + '</td></tr>' + 
 
 '<tr><td class="ab">Форма:</td><td>' + forms[f] + '</td></tr>' + 
 
@@ -30,7 +126,7 @@ document.write('<table>' +
 
 '<tr><td class="ab">Мест.:</td><td class=w>' + prons[p] + '</td></tr>' + 
 
-'<tr><td class="ab">Глагол:</td><td class=w>' + v12ru[v12] + '</td></tr>' + 
+'<tr><td class="ab">Глагол:</td><td class=w>' + verbs12[v12] + '</td></tr>' + 
 
 '</table>');
 

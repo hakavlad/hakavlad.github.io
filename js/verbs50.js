@@ -1,5 +1,7 @@
+
+
+
 var verbs50 = [
-"быть</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>be [bi:] (am, is, are) - was [wɔz] / were [wз:]", 
 "иметь</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>have [hæv] - had [hæd]", 
 "делать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>do [du:] - did [did]", 
 "говорить</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>say [sei] - said [sed]", 
@@ -10,7 +12,6 @@ var verbs50 = [
 "получать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>get [get] - got [gɔt]", 
 "приходить</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>come [kʌm] - came [keim]", 
 "видеть</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>see [si:] - saw [sɔ:]", 
-"вспомогательный глагол, завещать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>will [wil] - would [wud]", 
 "думать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>think [θiŋk] - thought [θɔ:t]", 
 "делать, изготавливать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>make [meik] - made [meid]", 
 "хотеть</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>want [wɔnt] - wanted [wɔntid]", 
@@ -18,13 +19,10 @@ var verbs50 = [
 "казаться</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>seem [si:m] - seemed [si:md]", 
 "звонить, звать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>call [kɔ:l] - called [kɔ:ld]", 
 "спрашивать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>ask [a:sk] - asked [a:skt]", 
-"вспомогательный глагол</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>shall [ʃæl] - should [ʃud]", 
 "позволять</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>let [let] - let [let]", 
 "брать, взять</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>take [teik] - took [tuk]", 
 "рассказывать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>tell [tel] - told [tould]", 
 "любить, нравится</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>like [laik] - liked [laikt]", 
-"мочь</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>may [mei] - might [mait]", 
-"должен</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>must [mʌst] - ", 
 "работать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>work [wз:k] - worked [wз:kt]", 
 "положить</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>put [put] - put [put]", 
 "открыть</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>open ['əup(ə)n] - opened ['əup(ə)nd]", 
@@ -35,7 +33,7 @@ var verbs50 = [
 "начинать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>begin [bi'gin] - began [bi'gæn]", 
 "слышать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>hear [hiə] - heard [hз:d]", 
 "нуждаться</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>need [ni:d] - needed [ni:did]", 
-"пробовать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>try [trai] - tryed [traid]", 
+"пробовать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>try [trai] - tried [traid]", 
 "гулять</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>walk [wɔ:k] - walked [wɔ:kt]", 
 "помнить</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>remember [ri'membə] - remembered [ri'membəd]", 
 "покидать, уезжать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>leave [li:v] - left [left]", 
@@ -45,8 +43,119 @@ var verbs50 = [
 "использовать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>use [ju:z] - used [ju:zid]", 
 "начинать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>start [sta:t] - started [sta:tid]", 
 "держать, хранить</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>keep [ki:p] - kept [kept]", 
-"плакать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>cry [krai] - cryed [krad]", 
+"плакать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>cry [krai] - cried [kraɪd]", 
 "жить</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>live [liv] - lived [livd]", 
 "останавливаться</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>stop [stɔp] - stopped [stɔpt]", 
 "закрывать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>close [kləuz] - closed [kləuzt]"
 ];
+
+
+
+
+var v50en = [
+"have", 
+"do", 
+"say", 
+"go", 
+"can", 
+"look", 
+"know", 
+"get", 
+"come", 
+"see", 
+"think", 
+"make", 
+"want", 
+"turn", 
+"seem", 
+"call", 
+"ask", 
+"let", 
+"take", 
+"tell", 
+"like", 
+"work", 
+"put", 
+"open", 
+"feel", 
+"give", 
+"love", 
+"find", 
+"begin", 
+"hear", 
+"need", 
+"try", 
+"walk", 
+"remember", 
+"leave", 
+"happen", 
+"talk", 
+"stand", 
+"use", 
+"start", 
+"keep", 
+"cry", 
+"live", 
+"stop", 
+"close"
+];
+
+
+
+
+
+
+var v50en2 = [
+"had", 
+"did", 
+"said", 
+"went", 
+"could", 
+"looked", 
+"knew", 
+"got", 
+"came", 
+"saw", 
+"thought", 
+"made", 
+"wanted", 
+"turned", 
+"seemed", 
+"called", 
+"asked", 
+"let", 
+"took", 
+"told", 
+"liked", 
+"worked", 
+"put", 
+"opened", 
+"felt", 
+"gave", 
+"loved", 
+"found", 
+"began", 
+"heard", 
+"needed", 
+"tryed", 
+"walked", 
+"remembered", 
+"left", 
+"happened", 
+"talked", 
+"stood", 
+"used", 
+"started", 
+"kept", 
+"cryed", 
+"lived", 
+"stopped", 
+"closed"
+];
+
+
+
+
+
+
+

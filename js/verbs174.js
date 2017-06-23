@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 var verbs174 = [
 "возникать, появляться</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>arise [ə`raɪz] - arose [ə`roʊz] - arisen [ə`rɪzn]", 
 "будить, просыпаться</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>awake [ə`waɪk] - awoke [ə`woʊk] - awoken [ə`woʊkn]", 
@@ -174,3 +186,19 @@ var verbs174 = [
 "выкручивать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>wring [rɪŋ] - wrung [rʌŋ] - wrung [rʌŋ]", 
 "писать</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>write [raɪt] - wrote [roʊt] - written [rɪtn]"
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

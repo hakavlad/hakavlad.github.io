@@ -6,7 +6,7 @@ p2 = Math.round( 6 * Math.random() - 0.5 );
 p3 = Math.round( 6 * Math.random() - 0.5 ); // притяжательные
 
 v12 = Math.round( 12 * Math.random() - 0.5 );
-v50 = Math.round( 50 * Math.random() - 0.5 ); // verbs
+v50 = Math.round( 45 * Math.random() - 0.5 ); // verbs
 v174 = Math.round( 174 * Math.random() - 0.5 );
 q = Math.round( 6 * Math.random() - 0.5 ); // questions
 num = Math.round( 2 * Math.random() - 0.5 ); // number
@@ -40,14 +40,14 @@ var absprons = [
 ];
 
 var abspronsen = [
-"mine [maɪn]", 
-"yours [jɔːz, jərz]", 
-"his [hɪz]", 
-"hers [hɜː(r)z]", 
-"its [ɪts]", 
-"ours [ɑːz, ɑːrz]", 
-"yours [jɔː(r), jʊr]", 
-"theirs [ðeəz, ðerz]"
+"mine", 
+"yours", 
+"his", 
+"hers", 
+"its", 
+"ours", 
+"yours", 
+"theirs"
 ];
 
 
@@ -91,6 +91,27 @@ var subjects = [
 "все, каждый</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>everybody [ˈevribɒdi, ˈevribɑːdi], everyone [ˈevriwʌn]", 
 ];
 
+
+var subjectsen = [
+"I", 
+"you", 
+"we", 
+"they", 
+"he", 
+"she", 
+"Alice", 
+"Bob", 
+"it", 
+"this", 
+"these", 
+"those", 
+"that", 
+"somebody/someone", 
+"anybody/anyone", 
+"nobody/no one", 
+"everybody/everyone", 
+];
+
 var prons2 = [
 "меня, мне</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>me [miː]", 
 "вас, тебе, тебя</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>you [ju]", 
@@ -101,12 +122,12 @@ var prons2 = [
 ];
 
 var prons2en = [
-"me [miː]", 
-"you [ju]", 
-"him [hɪm]", 
-"her [hə(r)]", 
-"us [ʌs]", 
-"them [ðəm]"
+"me", 
+"you", 
+"him", 
+"her", 
+"us", 
+"them"
 ];
 
 
@@ -120,6 +141,19 @@ var prons3 = [
 "их</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>their [ðer, ðeə]"
 ];
 
+
+var prons3en = [
+"my", 
+"your", 
+"his", 
+"her", 
+"our", 
+"their"
+];
+
+
+
+
 var quests = [
 "Что? Какой?</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>what [wɑːt, wɒt]", 
 "Кто?</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>who [huː]", 
@@ -128,6 +162,18 @@ var quests = [
 "Почему? Зачем?</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>why [waɪ]", 
 "Как? Каким Образом?</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>how [haʊ]"
 ];
+
+var questsen = [
+"what", 
+"who", 
+"where", 
+"when", 
+"why", 
+"how"
+];
+
+
+
 
 var numbers = [
 "единств.", 
@@ -148,100 +194,6 @@ var a = '';
 var b = '';
 var c = '';
 
-
-
-
-//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-
-// 1
-if (forms[f] === "?") {
-	if (tenses[t] === "future") {
-	a = "will ";
-	} else if (tenses[t] === "present") {
-
-//	a = "Do/Does ";
-
-		if ( (pronsen[p] === "he") || ((pronsen[p] === "she")) ) {
-		a = "does";
-		} else {
-		a = "do";
-		}
-
-	} else {
-	a = "did ";
-	}
-} else {
-a = pronsen[p];
-}
-
-// 2
-if ( forms[f] === "?" ) {
-b = pronsen[p];
-};
-if ( (forms[f] === "+") && (tenses[t] === "future") ) {
-b = "will";
-}
-if ( (forms[f] === "-") && (tenses[t] === "future") ) {
-b = "won't";
-}
-
-if ( (forms[f] === "-") && (tenses[t] === "present") ) {
-
-// b = "do/does not";
-
-		if ( ( pronsen[p] === "he" ) || ( pronsen[p] === "she" ) ) {
-		b = "doesn't";
-		} else {
-		b = "don't";
-		}
-
-}
-if ( (forms[f] === "-") && (tenses[t] === "past") ) {
-b = "didn't";
-}
-
-// 3
-if ( forms[f] === "-" ) {
-c = v12en[v12];
-}
-
-if ( forms[f] === "?" ) {
-c = v12en[v12] + "?";
-}
-
-if ( (forms[f] === "+") && (tenses[t] === "past") ) {
-c = v12en2[v12];
-}
-
-if ( (forms[f] === "+") && (tenses[t] === "present") ) {
-
-// c = v12en[v12] + "(s)";
-
-		if ( ( pronsen[p] === "he" ) || ( pronsen[p] === "she" ) ) {
-
-//		c = v12en[v12] + "(s)";
-
-			if ( v12en[v12] === "go" ) {
-					c = "goes";
-			} else {
-					c = v12en[v12] + 's'; 
-			}
-
-		} else {
-		c = v12en[v12];
-		}
-
-}
-
-if ( (forms[f] === "+") && (tenses[t] === "future") ) {
-c = v12en[v12];
-}
-
-var answer1 = a + ' ' + b + ' ' + c;
-
-var answer2 = a + ' ' + b + ' ' + c + ' ' + prons2en[p2]; // wrong with quests
-
-//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
 
 

@@ -6,8 +6,109 @@
 <meta name="description" content="EnglishTrainer | Тренажер базовых конструкций английского языка к курсу Полиглот английский за 16 часов. Уроки английского языка с Петровым для начинающих">
 <link rel="stylesheet" href="../css/normalize.css">
 <link rel="stylesheet" href="../css/style.css">
-<script src="../js/base.js"></script>
 <script src="../js/verbs50.js"></script>
+<script src="../js/base.js"></script>
+<script>
+//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+// 1
+if (forms[f] === "?") {
+	if (tenses[t] === "future") {
+	a = "will ";
+	} else if (tenses[t] === "present") {
+
+//	a = "Do/Does ";
+
+		if ( (pronsen[p] === "he") || ((pronsen[p] === "she")) ) {
+		a = "does";
+		} else {
+		a = "do";
+		}
+
+	} else {
+	a = "did ";
+	}
+} else {
+a = pronsen[p];
+}
+
+// 2
+if ( forms[f] === "?" ) {
+b = pronsen[p];
+};
+if ( (forms[f] === "+") && (tenses[t] === "future") ) {
+b = "will";
+}
+if ( (forms[f] === "-") && (tenses[t] === "future") ) {
+b = "won't";
+}
+
+if ( (forms[f] === "-") && (tenses[t] === "present") ) {
+
+// b = "do/does not";
+
+		if ( ( pronsen[p] === "he" ) || ( pronsen[p] === "she" ) ) {
+		b = "doesn't";
+		} else {
+		b = "don't";
+		}
+
+}
+if ( (forms[f] === "-") && (tenses[t] === "past") ) {
+b = "didn't";
+}
+
+// 3
+if ( forms[f] === "-" ) {
+c = v50en[v50];
+}
+
+if ( forms[f] === "?" ) {
+c = v50en[v50] + "?";
+}
+
+if ( (forms[f] === "+") && (tenses[t] === "past") ) {
+c = v50en2[v50];
+}
+
+if ( (forms[f] === "+") && (tenses[t] === "present") ) {
+
+// c = v50en[v50] + "(s)";
+
+		if ( ( pronsen[p] === "he" ) || ( pronsen[p] === "she" ) ) {
+
+//		c = v50en[v50] + "(s)";
+
+
+
+			if ( v50en[v50] === "go" ) {
+					c = "goes";
+			} else if (v50en[v50] === "do") {
+					c = "does";
+			} else if (v50en[v50] === "cry") {
+					c = "cries";
+			} else if (v50en[v50] === "try") {
+					c = "tries";
+			} else {
+					c = v50en[v50] + 's'; 
+			}
+
+
+		} else {
+		c = v50en[v50];
+		}
+
+}
+
+if ( (forms[f] === "+") && (tenses[t] === "future") ) {
+c = v50en[v50];
+}
+
+var answer1 = a + ' ' + b + ' ' + c;
+
+
+//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -21,6 +122,8 @@
 <script>
 
 document.write('<table>' + 
+
+'<tr><td class="ab">Ответ:</td><td>' + answer1 + '</td></tr>' + 
 
 '<tr><td class="ab">Форма:</td><td>' + forms[f] + '</td></tr>' + 
 
