@@ -8,8 +8,50 @@
 <link rel="stylesheet" href="../css/style.css">
 <script src="../js/verbs50.js"></script>
 <script src="../js/base.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<main>
+
+<div class="head"><a href="../index.html">EnglishTrainer</a> | Я вижу (I see)</div>
+
+<div id="table">
+
+Тренажер вида "Я вижу (I see)", использующий массивы из 45 глаголов 17 подлежащих.<br><br>
+Жмите нижележащую кнопку для генерации сочетаний слов.<br><br>
+Под спойлерами можете найти правильный ответ и слова с транскрипциями.<br><br>
+Используйте также <a href="../html/tables.html">справочные материалы</a>.
+
+</div>
+
+<div class="top" id="refresh">Refresh!</div>
+
 <script>
+
+function refresh(){
+
+t = Math.round( 3 * Math.random() - 0.5 ); // tenses
+f = Math.round( 3 * Math.random() - 0.5 ); // forms
+p = Math.round( 6 * Math.random() - 0.5 ); // pronouns
+p2 = Math.round( 6 * Math.random() - 0.5 ); 
+p3 = Math.round( 6 * Math.random() - 0.5 ); // притяжательные
+v12 = Math.round( 12 * Math.random() - 0.5 );
+v50 = Math.round( 45 * Math.random() - 0.5 ); // verbs
+v174 = Math.round( 174 * Math.random() - 0.5 );
+q = Math.round( 6 * Math.random() - 0.5 ); // questions
+num = Math.round( 2 * Math.random() - 0.5 ); // number
+a50 = Math.round( 6 * Math.random() - 0.5 ); // adj
+n202 = Math.round( 6 * Math.random() - 0.5 ); // noun
+subs = Math.round( 17 * Math.random() - 0.5 ); // subjects
+ap = Math.round( 8 * Math.random() - 0.5 ); // absprons
+
 //wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+var a = '';
+var b = '';
+var c = '';
 
 if ( (subjectsen[subs] === "nobody/no one") && (forms[f] === "-") ) {
 forms[f] = "+";
@@ -58,6 +100,7 @@ if ( (forms[f] === "-") && (tenses[t] === "present") ) {
 		}
 
 }
+
 if ( (forms[f] === "-") && (tenses[t] === "past") ) {
 b = "didn't";
 }
@@ -79,10 +122,9 @@ if ( (forms[f] === "+") && (tenses[t] === "present") ) {
 
 // c = v50en[v50] + "(s)";
 
-		if ( ( subjectsen[subs] === "he" ) || ( subjectsen[subs] === "she" ) ) {
+			if ( (subjectsen[subs] === "he") || (subjectsen[subs] === "she") || (subjectsen[subs] === "Alice") || (subjectsen[subs] === "Bob") || (subjectsen[subs] === "it") || (subjectsen[subs] === "this") || (subjectsen[subs] === "that") || (subjectsen[subs] === "somebody/someone") || (subjectsen[subs] === "anybody/anyone") || (subjectsen[subs] === "nobody/no one") || (subjectsen[subs] === "everybody/everyone") ) {
 
 //		c = v50en[v50] + "(s)";
-
 
 
 			if ( v50en[v50] === "go" ) {
@@ -97,7 +139,6 @@ if ( (forms[f] === "+") && (tenses[t] === "present") ) {
 					c = v50en[v50] + 's'; 
 			}
 
-
 		} else {
 		c = v50en[v50];
 		}
@@ -110,24 +151,11 @@ c = v50en[v50];
 
 var answer1 = a + ' ' + b + ' ' + c;
 
-
 //wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 
-<body class="noframe">
+table.innerHTML = '<table>' + 
 
-<main>
-
-<div class="head"><a href="../index.html">EnglishTrainer</a> | Я вижу (I see)</div>
-
-
-<script>
-
-document.write('<table>' + 
-
-'<tr><td class="ab">Ответ:</td><td class=spo>' + answer1 + '</td></tr>' + 
+'<tr><td class="ab">Ответ:</td><td>' + answer1 + '</td></tr>' + 
 
 '<tr><td class="ab">Форма:</td><td>' + forms[f] + '</td></tr>' + 
 
@@ -137,11 +165,15 @@ document.write('<table>' +
 
 '<tr><td class="ab">Глагол:</td><td class=w>' + verbs50[v50] + '</td></tr>' + 
 
-'</table>');
+'</table>';
+
+}
+
+window.onload = function(){ 
+document.querySelector("#refresh").onclick = refresh;
+}
 
 </script>
-
-<a href="" class="top">Обновить</a>
 
 </main>
 

@@ -137,7 +137,7 @@ var v50en2 = [
 "began", 
 "heard", 
 "needed", 
-"tryed", 
+"tried", 
 "walked", 
 "remembered", 
 "left", 
@@ -147,7 +147,7 @@ var v50en2 = [
 "used", 
 "started", 
 "kept", 
-"cryed", 
+"cried", 
 "lived", 
 "stopped", 
 "closed"

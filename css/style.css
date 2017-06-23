@@ -1,13 +1,19 @@
 html {
-background: #fafafa;
+background: #f0f0f0;
 font-family: Arial, sans-serif;
 font-size: 16px;
 }
+body {
+padding: 9px;
+}
 main {
+background: #fafafa;
 max-width: 800px;
 margin: 0 auto;
 padding: 0 10px 0 10px;
-border: 0px solid green;
+border: 1px solid #bbb;
+border-radius: 15px;
+box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 a {
 text-decoration : none;
@@ -29,44 +35,57 @@ color: #428;
 img {
 width: 100%;
 }
+
+.ans {
+padding-bottom: 0px;
+}
+
 .spo {
 display: block;
-background: #fafbfc;
+background: #fafafa;
 color: #fafbfc;
 border-bottom: 0px solid #333;
 }
 .spo:hover {
-background: #fafbfc;
+background: #fafafa;
 color: #642;
 }
+
+table {
+width: 100%;
+}
+
+
 .top {
 display: inline-block;
-padding: 12px 70px 12px 70px;
+padding: 14px 90px 14px 90px;
 margin: 20px 0 10px 0;
 background: #f0f0f0;
-border: 1px solid #ddd;
-border-radius: 30px;
+border: 1px solid #bbb;
+border-radius: 15px;
+color: #333;
 }
 .top:hover {
 background: #e9e9e9;
+cursor: pointer;
 }
 .noframe {
-padding: 5px 0 0 7px;
+padding: 5px 5px 5px 5px;
 }
 .head {
 color: #666;
 font-weight: bold;
-margin: 9px 0 9px 0;
-font-size: 1.1em;
+margin: 12px 0 12px 4px;
+font-size: 1.3em;
 }
 td {
-padding: 3px 9px 0 0;
-border: 0px solid red;
+padding: 2px 0 2px 0;
+border: 0px dotted #bbb;
 vertical-align: top;
-min-width: 100px;
 }
 .ab {
 color: grey;
+width: 110px;
 }
 pre {
 font-size: 0.8em;
@@ -81,14 +100,19 @@ font-size: 0.9em;
 font-weight: bold;
 }
 
-	@media  screen and  (min-height: 550px)  {
-		@media  screen and  (min-width: 800px)  {
+	@media  screen and  (min-height: 500px)  {
+		@media  screen and  (min-width: 750px)  {
+
+
+body {
+padding: 20px;
+}
 
 html {
 font-size: 18px;
 }
 main {
-padding: 10px 30px 10px 30px;
+padding: 10px 30px 25px 30px;
 }
 .head {
 font-size: 1.2em;
@@ -96,6 +120,9 @@ margin: 18px 0 18px 0;
 }
 .top {
 margin: 25px 0 5px 0;
+}
+.ab {
+width: 130px;
 }
 
 		}

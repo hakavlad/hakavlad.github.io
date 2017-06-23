@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 t = Math.round( 3 * Math.random() - 0.5 ); // tenses
 f = Math.round( 3 * Math.random() - 0.5 ); // forms
 p = Math.round( 6 * Math.random() - 0.5 ); // pronouns
@@ -14,6 +21,7 @@ a50 = Math.round( 6 * Math.random() - 0.5 ); // adj
 n202 = Math.round( 6 * Math.random() - 0.5 ); // noun
 subs = Math.round( 17 * Math.random() - 0.5 ); // subjects
 ap = Math.round( 8 * Math.random() - 0.5 ); // absprons
+
 
 var forms = [
 "-", 
@@ -130,8 +138,6 @@ var prons2en = [
 "them"
 ];
 
-
-
 var prons3 = [
 "моё, мои</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>my [maɪ]", 
 "твоё, ваше</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>your [jʊ(r)]", 
@@ -152,8 +158,6 @@ var prons3en = [
 ];
 
 
-
-
 var quests = [
 "Что? Какой?</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>what [wɑːt, wɒt]", 
 "Кто?</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>who [huː]", 
@@ -172,23 +176,12 @@ var questsen = [
 "how"
 ];
 
-
-
-
 var numbers = [
 "единств.", 
 "множ."
 ];
 
 var be = "быть</td></tr><tr><td class=ab>Спойлер:</td><td class=spo>be [bi:] (am [æm, əm], is [ɪz], are [ɑː(r)]) - was [wɒz]/were [wɜ:] - been [bi:n]";
-
-
-
-
-
-
-
-
 
 var a = '';
 var b = '';
