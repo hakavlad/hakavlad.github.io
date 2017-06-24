@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>EnglishTrainer | Тренажер базовых конструкций английского языка</title>
+<meta name="description" content="EnglishTrainer | Тренажер базовых конструкций английского языка к курсу Полиглот английский за 16 часов. Уроки английского языка с Петровым для начинающих">
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/base.js"></script>
+<script src="../js/verbs50.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter45099435 = new Ya.Metrika({
+                    id:45099435,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/45099435" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<body>
+
+<main>
+
+<div class="head"><a href="../index.html">EnglishTrainer</a></div>
+
+<div id="table">
+
+Тренажер вида "Я есть видящий (I am seeing)", использующий массив из 45 глаголов.<br><br>
+Составьте предложение на русском и переведите его на английский в соответствии с предлагаемыми временем и формой.<br><br>
+Жмите нижележащую кнопку для генерации сочетаний слов.<br><br>
+Используйте также <a href="../html/tables.html">справочные материалы</a>.
+
+</div>
+
+<div class="top" id="refresh">Refresh!</div>
+
+<script>
+
+function refresh(){
+
+f = Math.round( 3 * Math.random() - 0.5 ); // forms
+t = Math.round( 3 * Math.random() - 0.5 ); // tenses
+p = Math.round( 6 * Math.random() - 0.5 ); // pronouns
+p2 = Math.round( 6 * Math.random() - 0.5 ); 
+p3 = Math.round( 6 * Math.random() - 0.5 ); // притяжательные
+ap = Math.round( 8 * Math.random() - 0.5 ); // absprons
+v12 = Math.round( 12 * Math.random() - 0.5 );
+v50 = Math.round( 45 * Math.random() - 0.5 ); // verbs
+v174 = Math.round( 174 * Math.random() - 0.5 );
+q = Math.round( 6 * Math.random() - 0.5 ); // questions
+num = Math.round( 2 * Math.random() - 0.5 ); // number
+a50 = Math.round( 50 * Math.random() - 0.5 ); // adj
+n202 = Math.round( 202 * Math.random() - 0.5 ); // noun
+subs = Math.round( 17 * Math.random() - 0.5 ); // subjects
+
+table.innerHTML = '<table>' + 
+
+'<tr><td class="ab">Форма:</td><td>' + forms[f] + '</td></tr>' + 
+
+'<tr><td class="ab">Время:</td><td>' + tenses[t] + '</td></tr>' + 
+
+'<tr><td class="ab">Мест.:</td><td class=w>' + prons[p] + '</td></tr>' + 
+
+'<tr><td class="ab">Глагол:</td><td class=w>' + be + '</td></tr>' + 
+
+'<tr><td class="ab">Глагол:</td><td class=w>' + verbs50[v50] + '</td></tr>' + 
+
+'</table>';
+
+}
+
+window.onload = function(){ 
+document.querySelector("#refresh").onclick = refresh;
+}
+
+</script>
+
+</main>
+
+</body>
+</html>
