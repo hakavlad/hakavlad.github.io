@@ -78,6 +78,8 @@ width: 110px;
 }
 pre {
 font-size: 0.8em;
+white-space: pre-wrap;
+word-wrap: break-word;
 }
 li {
 padding: 0 0 9px 0;
